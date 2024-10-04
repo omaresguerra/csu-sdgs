@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SDG Website</title>
+    <!-- Bootstrap 3.4.1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .col-sm-4{
+            padding: 5px;
+        }
+
+        .sdg-logo-container{
+            width: 200px;
+        }
+        .sdg-logo{
+            width: 200px;
+            position: absolute;
+            bottom: 5px;
+
+        }
+
+        .title{
+            font-family: 'Oswald', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .text-overlay{
+            font-family: 'Oswald', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .text-overlay-p{
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .sdg1-container{
+            height: 450px;
+            background-image: url('assets/img/sdg1-gray.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+      
+        .sdg1-bg{
+            height: 450px;
+            background: linear-gradient(rgba(229,36,59,0), rgba(229,36,59,1) 95%);
+            transition: backgrounf 0.15s;
+            position: relative;
+        }
+
+        .sdg1-bg:hover {
+            background: rgba(229,36,59,1);
+        }
+
+        .sdg1-overlay, .sdg4-overlay, .sdg5-overlay, .sdg17-overlay, .sdg14-overlay {
+            position: absolute;
+            bottom: 100%;
+            padding: 15px;
+            overflow: hidden;
+            width: 95%;
+            height: 0;
+     
+        }
+
+        .sdg1-bg:hover .sdg1-overlay, .sdg4-bg:hover .sdg4-overlay, .sdg5-bg:hover .sdg5-overlay, .sdg17-bg:hover .sdg17-overlay, .sdg14-bg:hover .sdg14-overlay{
+            bottom: 0;
+            height: 100%;
+        }
+
+        .sdg1-bg:hover .sdg-logo, .sdg4-bg:hover .sdg-logo, .sdg5-bg:hover .sdg-logo, .sdg17-bg:hover .sdg-logo, .sdg14-bg:hover .sdg-logo {
+            width: 230px;
+        }
+
+        .sdg4-container{
+            height: 450px;
+            background-image: url('assets/img/education-gray.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sdg4-bg{
+            height: 450px;
+            background: linear-gradient(rgba(197,25,45,0) , rgba(197,25,45,1) 95%);
+            transition: backgrounf 0.15s;
+        }
+
+        .sdg4-bg:hover{
+            background: rgba(197,25,45,1);
+        }
+
+        .sdg5-container{
+            height: 450px;
+            background-image: url('assets/img/sdg5-gray.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sdg5-bg{
+            height: 450px;
+            background: linear-gradient(rgba(255,58,33,0) , rgba(255,58,33,1) 95%);
+            transition: backgrounf 0.15s;
+        }
+
+        .sdg5-bg:hover{
+            background: rgba(255,58,33,1);
+        }
+
+        .sdg14-container{
+            height: 450px;
+            background-image: url('assets/img/fisheries-gray.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sdg14-bg{
+            height: 450px;
+            background: linear-gradient(rgba(10,151,217,0) , rgba(10,151,217,1) 95%);
+            transition: backgrounf 0.15s;
+        }
+
+        .sdg14-bg:hover{
+            background: rgba(10,151,217,1);
+        }
+
+        .sdg17-container{
+            height: 450px;
+            background-image: url('assets/img/icsa4-gray.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sdg17-bg{
+            height: 450px;
+            background: linear-gradient(rgba(25,72,106,0) , rgba(25,72,106,1) 95%);
+            transition: backgrounf 0.15s;
+        }
+
+        .sdg17-bg:hover{
+            background: rgba(25,72,106,1);
+        }
+
+        @media only screen and (max-width: 991px) {
+            .sdg-logo{
+                 width: 160px;
+            }
+            .sdg1-bg:hover .sdg-logo, .sdg4-bg:hover .sdg-logo, .sdg5-bg:hover .sdg-logo, .sdg17-bg:hover .sdg-logo {
+                width: 160px;
+            }
+            .text-overlay{
+                font-size: 32px;
+            }
+
+            .text-overlay-p{
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 765px) {
+           .sdg1-container, .sdg4-container, .sdg5-container, .sdg17-container, .sdg1-bg, .sdg4-bg, .sdg5-bg, .sdg17-bg {
+                height: 300px;
+                background-size: 100%;
+            }
+            .sdg1-bg{
+                background: linear-gradient(to left, rgba(229,36,59,0), rgba(229,36,59,1) 85%);
+            }
+            .sdg4-bg{
+                background: linear-gradient(to left, rgba(197,25,45,0) , rgba(197,25,45,1) 85%);
+            }
+            .sdg5-bg{
+                background: linear-gradient(to left, rgba(255,58,33,0) , rgba(255,58,33,1) 85%);
+            }
+            .sdg17-bg{
+                background: linear-gradient(to left, rgba(25,72,106,0) , rgba(25,72,106,1) 85%);
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+           .sdg1-container, .sdg4-container, .sdg5-container, .sdg17-container, .sdg1-bg, .sdg4-bg, .sdg5-bg, .sdg17-bg {
+                height: 180px;
+                background-size: 100%;
+            }
+           
+            .sdg-logo{
+                 width: 150px;
+            }
+
+            .sdg1-overlay, .sdg4-overlay, .sdg5-overlay, .sdg17-overlay{
+                position: absolute;
+            }
+            .sdg1-bg:hover .sdg1-overlay, .sdg4-bg:hover .sdg4-overlay, .sdg5-bg:hover .sdg5-overlay, .sdg17-bg:hover .sdg17-overlay{
+                bottom: 0;
+                height: 0;
+            }
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+             <h1 class="title">CSU and the Sustainable Development Goals</h1>
+             <p>Cagayan State University (CSU) exemplifies an organization committed to achieving the Sustainable Development Goals (SDGs) of the United Nation. With a vision to be a global center of excellence in the arts, culture, agriculture and fisheries, and the sciences, CSU continues to create significant strides towards achieving the United Nations Sustainable Development Goals (SDGs). Its provision of quality instruction, engagement in innovative and creative research, delivery of responsive public service, and engagement in productive industry and community, reflect its dedication to the SDGs. By integrating sustainability and social responsibility into every aspect of its institution, CSU is not only shaping the future but leading the way in creating a more equitable and sustainable world for all.</p>
+             <hr>
+        </div>
+        <div class="row">
+            <!-- SDG 1 -->
+            <div class="col-sm-4">
+                <a href="sdg1.html">
+                <div class="sdg1-container">
+                    <div class="sdg1-bg">
+                        <div class="sdg-logo-container">
+                            <img src="assets/sdg-icons/sdg1/sdg1.png" alt="Goal 1" class="sdg-logo">
+                        </div>
+                        <div class="sdg1-overlay">
+                            <h2 class="text-overlay">No Poverty</h2>
+                            <p class="text-overlay-p">End poverty at all forms</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+             <!-- SDG 4 -->
+            <div class="col-sm-4">
+                <a href="sdg4.html">
+                <div class="sdg4-container">
+                    <div class="sdg4-bg">
+                        <div class="sdg-logo-container">
+                            <img src="assets/sdg-icons/sdg4/sdg4.png" alt="Goal 4" class="sdg-logo">
+                        </div>
+                        <div class="sdg4-overlay">
+                            <h2 class="text-overlay">Quality Education</h2>
+                            <p class="text-overlay-p">Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+
+            <!-- SDG 5 -->
+            <div class="col-sm-4">
+                <a href="sdg5.html">
+                <div class="sdg5-container">
+                    <div class="sdg5-bg">
+                        <div class="sdg-logo-container">
+                            <img src="assets/sdg-icons/sdg5/sdg5.png" alt="Goal 5" class="sdg-logo">
+                        </div>
+                        <div class="sdg5-overlay">
+                            <h2 class="text-overlay">Gender Equality</h2>
+                            <p class="text-overlay-p">Achieve gender equality and empower all women and girls</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <!-- SDG 14 -->
+            <div class="col-sm-4">
+                <a href="sdg14.html">
+                <div class="sdg14-container">
+                    <div class="sdg14-bg">
+                        <div class="sdg-logo-container">
+                            <img src="assets/sdg-icons/sdg14/sdg14.png" alt="Goal 14" class="sdg-logo">
+                        </div>
+                        <div class="sdg14-overlay">
+                            <h2 class="text-overlay">Life Below Water</h2>
+                            <p class="text-overlay-p">Conserve and sustainably use the oceans, seas and marine resources for sustainable development</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <!-- SDG 17 -->
+            <div class="col-sm-4">
+                <a href="sdg17.html">
+                <div class="sdg17-container">
+                    <div class="sdg17-bg">
+                        <div class="sdg-logo-container">
+                            <img src="assets/sdg-icons/sdg17/sdg17.png" alt="Goal 17" class="sdg-logo">
+                        </div>
+                        <div class="sdg17-overlay">
+                            <h2 class="text-overlay">Partnerships for the Goals</h2>
+                            <p class="text-overlay-p">Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development</p>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+
+    <footer>
+       
+    </footer>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+</body>
+</html>
