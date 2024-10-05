@@ -16,7 +16,6 @@ The platform serves as a hub for information on how CSU is actively contributing
 
 - **Frontend**: 
   - HTML5, CSS3, JavaScript
-  - [React.js] or [Vue.js] (Specify depending on your development choice)
   - Bootstrap for responsive design
 
 ## Installation & Setup
